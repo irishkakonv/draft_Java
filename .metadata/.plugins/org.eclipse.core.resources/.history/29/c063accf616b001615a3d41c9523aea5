@@ -1,0 +1,15 @@
+package NIIT;
+
+class Data{
+	public static int index;
+}
+
+public class Main26_3 {
+
+	public static void main(String[] args) {
+		Runnable l = () -> {Data.index++;};
+		new Thread(l).start();
+
+	}
+
+}

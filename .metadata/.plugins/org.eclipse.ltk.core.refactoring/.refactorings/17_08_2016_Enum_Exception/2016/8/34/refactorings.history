@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;line&apos; in &apos;NIIT.A.printDayOfWeek(...)&apos; to &apos;daySTR&apos;&#x0D;&#x0A;- Original project: &apos;17_08_2016&apos;&#x0D;&#x0A;- Original element: &apos;NIIT.A.printDayOfWeek(DayOfWeek).line&apos;&#x0D;&#x0A;- Renamed element: &apos;line&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;line&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;NIIT{Main.java[A~printDayOfWeek~QDayOfWeek;@line!126!149!133!136!QString;!0!false" name="daySTR" references="true" stamp="1471424230139" version="1.0"/>
+</session>

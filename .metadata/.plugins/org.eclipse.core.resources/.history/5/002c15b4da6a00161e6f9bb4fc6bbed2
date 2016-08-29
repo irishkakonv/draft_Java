@@ -1,0 +1,48 @@
+package adf;
+
+import java.awt.Window.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+interface IInspect<T>{
+	public void inspect(T type);
+}
+
+interface ISet<T>{
+	public void set(T type);
+}
+
+interface IModif<T>{
+	public void modif(int index);
+}
+
+class MyContainer<T> implements IInspect<T>, ISet<T>, IModif<T>{
+	T name;
+	
+	@Override
+	public void inspect(T type) {
+		System.out.println(type);
+	}
+	
+	@Override
+	public void set(T type) {
+		
+	}
+	
+	@Override
+	public void modif(int index) {
+		
+	}
+
+}
+
+public class Student<T> {
+	ArrayList<T> ln = new ArrayList<T>();
+	Map<String, String[]> map = new HashMap<String, String[]>();
+	public static <T> void main(String[] args) {
+		
+	}
+
+}

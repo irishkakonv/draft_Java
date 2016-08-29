@@ -1,0 +1,25 @@
+package NIIT;
+
+class Data{
+	public static int index;
+}
+
+public class Main26_3 {
+
+	public static void main(String[] args) {
+		Runnable l = () -> {
+			int n = 10;
+		
+			for (int i = 0; i < n; i++){
+			Data.index++;
+			}
+		};
+		
+		Thread th1 = new Thread(l);
+		th1.start();
+		
+
+		System.out.println("Data index " + Data.index);
+	}
+
+}

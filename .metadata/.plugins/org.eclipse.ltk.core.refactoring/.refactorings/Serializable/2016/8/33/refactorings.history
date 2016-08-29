@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;NIIT.Serializable.java&apos; to &apos;RandomClass.java&apos;&#x0D;&#x0A;- Original project: &apos;Serializable&apos;&#x0D;&#x0A;- Original element: &apos;NIIT.Serializable.java&apos;&#x0D;&#x0A;- Renamed element: &apos;NIIT.RandomClass.java&apos;" description="Rename compilation unit &apos;Serializable.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;NIIT{Serializable.java" name="RandomClass.java" references="false" stamp="1471165251158" version="1.0"/>
+</session>

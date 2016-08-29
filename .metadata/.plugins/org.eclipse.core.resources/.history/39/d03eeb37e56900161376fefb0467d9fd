@@ -1,0 +1,14 @@
+package NIIT;
+
+import java.util.Scanner;
+
+public class Scanner {
+	public String scanner() {
+		Scanner sc = new Scanner(System.in);
+
+        String s1;
+
+        s1 = sc.nextLine();
+        return s1;
+	}
+}

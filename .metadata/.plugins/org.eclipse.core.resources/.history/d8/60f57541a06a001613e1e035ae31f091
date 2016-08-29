@@ -1,0 +1,24 @@
+package NIIT;
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+public class Collection {
+
+	public static void main(String[] args) {
+		LinkedList<String> ls = new LinkedList<>();
+		LinkedList<Integer> li = new LinkedList<>();
+		
+		ArrayList<String> as = new ArrayList<>();
+		
+		/*Integer i = new Integer(1);  //автоупаковка
+		int i2 = 1;
+		*/
+		
+		
+		ls.add("");
+		li.add(123);
+	}
+
+}

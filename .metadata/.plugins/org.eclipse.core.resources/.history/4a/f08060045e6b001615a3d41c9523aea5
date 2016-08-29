@@ -1,0 +1,27 @@
+package NIIT;
+
+class A extends Thread{
+	@Override
+	public void run() {
+		Main26_2.prSeq(this.toString(), 10);
+	}
+}
+
+
+public class Main26_2 {
+
+	public static void main(String[] args)  {
+		prSeq("main", 10);
+		
+		Thread th1 = new Thread();
+	}
+	
+	private static void prSeq(String label, int limit) {
+		for(int i = 0; i < limit; i++){
+			System.out.println(label + ":" + i);
+			
+		}
+		
+	}
+
+}

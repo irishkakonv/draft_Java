@@ -4,7 +4,7 @@ class Point{
 	private int x;
 	private int y;
 	
-	public int m(int value){
+	public int m(int value){			//перегрузка методов
 		return 42;
 	}
 	

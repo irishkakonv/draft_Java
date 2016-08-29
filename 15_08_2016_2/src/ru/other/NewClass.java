@@ -5,7 +5,7 @@ import NIIT.B;
 import NIIT.ClassWork1;
 
 public class NewClass extends B {
-	//public void m(char ch, int value){}                            // if m() not final
+	//public void m(char ch, int value){}                            // if m() not final можем переопределить
 	public void m(){                                                 // if m()  final
 		A a = new A();
 		B b = new B();

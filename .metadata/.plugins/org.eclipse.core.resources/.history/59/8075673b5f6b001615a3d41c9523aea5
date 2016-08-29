@@ -1,0 +1,34 @@
+package NIIT;
+
+class Aa extends Thread{
+	@Override
+	public void run() {
+		for(int i = 0; i < 1000; i++){
+			System.out.println(this.toString() + ":" + i);
+			
+		}
+	}
+}
+
+
+public class Main26_2 {
+
+	public static void main(String[] args)  {
+		for(int i = 0; i < 1000; i++){
+			System.out.println("Main26_2" + ":" + i);
+			
+		}
+		Aa a = new Aa();
+		a.start();
+		
+	}
+	
+	static void prSeq(String label, int limit) {
+		for(int i = 0; i < limit; i++){
+			System.out.println(label + ":" + i);
+			
+		}
+		
+	}
+
+}

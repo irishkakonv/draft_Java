@@ -1,0 +1,22 @@
+package NIIT;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+public class Main26_1 {
+
+	public static void main(String[] args) throws IOException {
+		InputStream is = System.in;
+		OutputStream os = System.out;
+		
+		int ch;
+		if((ch = is.read()) != -1){
+			os.write(ch);
+		}
+		else {
+			System.out.println("End of file");
+		}
+	}
+
+}

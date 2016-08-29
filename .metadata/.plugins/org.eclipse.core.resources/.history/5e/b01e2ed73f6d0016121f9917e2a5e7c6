@@ -1,0 +1,85 @@
+package adf;
+
+import java.util.ArrayList;
+
+@FunctionalInterface
+interface IInspect<T> {
+	public T inspect(Student_<T> student);
+}
+
+@FunctionalInterface
+interface ISet<T> {
+	public void set(T type);
+}
+
+@FunctionalInterface
+interface IModif<T> {
+	public void modif();
+}
+
+class Student_<T> {
+	T name;
+	public Student_(T string){
+		name = string;
+	}
+}
+
+class Element<T>{
+	Student_<T> student;
+	IInspect<T> inspect;
+	ISet<T> setter;
+	IModif<T> modifodif;
+	
+	public void inspectm() {
+		System.out.println(inspect.inspect(student));
+	}
+}
+
+public class MyContaner_<T> {
+	private String string;
+	
+	ArrayList<Student_> arr = new ArrayList<>();
+	
+	
+	public void add(T name, T str1, T str2, T str3) {
+//		Student_ st = new Student_();
+//		st.name = name;
+//		st.setAdd =str1;
+//		st.modifAdd = str2;
+//		st.inspectAdd = str3;
+//		arr.add(st);
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+//	IInspect<T> inspect = () ->{return (T) arr;};
+	
+	ISet<T> set = (T type) ->{string = (String) type;};
+	
+	IModif<T> modif = () ->{
+		for (Student_ string : arr) {
+			System.out.println(string.toString());
+		}
+	};
+	
+	public static <T> void main(String[] args) {
+		MyContaner_<String> mc = new MyContaner_<String>();
+		
+		mc.add("Peter", "inspect", "set", "modif");
+//		mc.inspect();
+//		mc.modif();
+//		mc.set("Hello!");
+		
+		Element<String> element = new Element();
+		element.student = new Student_("PETER");
+		element.inspect = (Student_<String> st) ->{return st.name ;};
+		
+		element.inspectm();
+		
+		
+//		
+		
+	}
+
+	
+}
