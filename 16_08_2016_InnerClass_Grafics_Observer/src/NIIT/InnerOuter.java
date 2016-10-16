@@ -20,6 +20,7 @@ class Outher{
 			System.out.println("Inner class");
 			Outher.this.printOuter2();
 			System.out.println(outerField);
+			printOuter2();
 		}
 	}
 }

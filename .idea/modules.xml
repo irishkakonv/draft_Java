@@ -2,25 +2,38 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/10/10.iml" filepath="$PROJECT_DIR$/10/10.iml" />
       <module fileurl="file://$PROJECT_DIR$/10_08_2016/10_08_2016.iml" filepath="$PROJECT_DIR$/10_08_2016/10_08_2016.iml" />
       <module fileurl="file://$PROJECT_DIR$/11_08_2016/11_08_2016.iml" filepath="$PROJECT_DIR$/11_08_2016/11_08_2016.iml" />
       <module fileurl="file://$PROJECT_DIR$/12_08_2016/12_08_2016.iml" filepath="$PROJECT_DIR$/12_08_2016/12_08_2016.iml" />
-      <module fileurl="file://$PROJECT_DIR$/12_08_2016_6/12_08_2016_6.iml" filepath="$PROJECT_DIR$/12_08_2016_6/12_08_2016_6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_08_2016_Stack_Dictionary/12_08_2016_Stack_Dictionary.iml" filepath="$PROJECT_DIR$/12_08_2016_Stack_Dictionary/12_08_2016_Stack_Dictionary.iml" />
       <module fileurl="file://$PROJECT_DIR$/15_08_2016/15_08_2016.iml" filepath="$PROJECT_DIR$/15_08_2016/15_08_2016.iml" />
       <module fileurl="file://$PROJECT_DIR$/15_08_2016_1/15_08_2016_1.iml" filepath="$PROJECT_DIR$/15_08_2016_1/15_08_2016_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/15_08_2016_2/15_08_2016_2.iml" filepath="$PROJECT_DIR$/15_08_2016_2/15_08_2016_2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/15_08_2016_HomeWork1/15_08_2016_HomeWork1.iml" filepath="$PROJECT_DIR$/15_08_2016_HomeWork1/15_08_2016_HomeWork1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/15_08_2016_StackHomeWork/15_08_2016_StackHomeWork.iml" filepath="$PROJECT_DIR$/15_08_2016_StackHomeWork/15_08_2016_StackHomeWork.iml" />
-      <module fileurl="file://$PROJECT_DIR$/16_08_2016/16_08_2016.iml" filepath="$PROJECT_DIR$/16_08_2016/16_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_08_2016_DinamicMemoryStackAndArrayList/15_08_2016_DinamicMemoryStackAndArrayList.iml" filepath="$PROJECT_DIR$/15_08_2016_DinamicMemoryStackAndArrayList/15_08_2016_DinamicMemoryStackAndArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_08_2016_StackPushPop/15_08_2016_StackPushPop.iml" filepath="$PROJECT_DIR$/15_08_2016_StackPushPop/15_08_2016_StackPushPop.iml" />
       <module fileurl="file://$PROJECT_DIR$/16_08_2016_1/16_08_2016_1.iml" filepath="$PROJECT_DIR$/16_08_2016_1/16_08_2016_1.iml" />
       <module fileurl="file://$PROJECT_DIR$/16_08_2016_2/16_08_2016_2.iml" filepath="$PROJECT_DIR$/16_08_2016_2/16_08_2016_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16_08_2016_InnerClass_Grafics_Observer/16_08_2016_InnerClass_Grafics_Observer.iml" filepath="$PROJECT_DIR$/16_08_2016_InnerClass_Grafics_Observer/16_08_2016_InnerClass_Grafics_Observer.iml" />
       <module fileurl="file://$PROJECT_DIR$/16_08_2016_StudentsNomeWork/16_08_2016_StudentsNomeWork.iml" filepath="$PROJECT_DIR$/16_08_2016_StudentsNomeWork/16_08_2016_StudentsNomeWork.iml" />
-      <module fileurl="file://$PROJECT_DIR$/17_08_2016/17_08_2016.iml" filepath="$PROJECT_DIR$/17_08_2016/17_08_2016.iml" />
-      <module fileurl="file://$PROJECT_DIR$/18_08_2016/18_08_2016.iml" filepath="$PROJECT_DIR$/18_08_2016/18_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17_08_2016_Enum_Exception/17_08_2016_Enum_Exception.iml" filepath="$PROJECT_DIR$/17_08_2016_Enum_Exception/17_08_2016_Enum_Exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18_08_2016_ManyMethodsForElementClass/18_08_2016_ManyMethodsForElementClass.iml" filepath="$PROJECT_DIR$/18_08_2016_ManyMethodsForElementClass/18_08_2016_ManyMethodsForElementClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19_08_2016/19_08_2016.iml" filepath="$PROJECT_DIR$/19_08_2016/19_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19_08_2016_String_Annotation_RegularExpressions/19_08_2016_String_Annotation_RegularExpressions.iml" filepath="$PROJECT_DIR$/19_08_2016_String_Annotation_RegularExpressions/19_08_2016_String_Annotation_RegularExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/25_08_2016_Collection_LyambdaExpressions/25_08_2016_Collection_LyambdaExpressions.iml" filepath="$PROJECT_DIR$/25_08_2016_Collection_LyambdaExpressions/25_08_2016_Collection_LyambdaExpressions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/26_08_2016_Thread/26_08_2016_Thread.iml" filepath="$PROJECT_DIR$/26_08_2016_Thread/26_08_2016_Thread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/29_08_2016/29_08_2016.iml" filepath="$PROJECT_DIR$/29_08_2016/29_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/30_08_2016/30_08_2016.iml" filepath="$PROJECT_DIR$/30_08_2016/30_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/30_08_2016_2/30_08_2016_2.iml" filepath="$PROJECT_DIR$/30_08_2016_2/30_08_2016_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/31_08_2016/31_08_2016.iml" filepath="$PROJECT_DIR$/31_08_2016/31_08_2016.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Collection_Container_HomeWork/Collection_Container_HomeWork.iml" filepath="$PROJECT_DIR$/Collection_Container_HomeWork/Collection_Container_HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Empty/Empty.iml" filepath="$PROJECT_DIR$/Empty/Empty.iml" />
       <module fileurl="file://$PROJECT_DIR$/NIIT_tasks/NIIT_tasks.iml" filepath="$PROJECT_DIR$/NIIT_tasks/NIIT_tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reflaction/Reflaction.iml" filepath="$PROJECT_DIR$/Reflaction/Reflaction.iml" />
       <module fileurl="file://$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" filepath="$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" />
       <module fileurl="file://$PROJECT_DIR$/Serializable/Serializable.iml" filepath="$PROJECT_DIR$/Serializable/Serializable.iml" />
       <module fileurl="file://$PROJECT_DIR$/StackYetTime/StackYetTime.iml" filepath="$PROJECT_DIR$/StackYetTime/StackYetTime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/notname/notname.iml" filepath="$PROJECT_DIR$/notname/notname.iml" />
     </modules>
   </component>
 </project>
