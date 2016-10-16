@@ -1,0 +1,108 @@
+package NIIT;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.LinkedList;
+
+public class Server {
+	private int port;
+	private ServerSocket ss;
+	private Socket socket;
+	private BufferedReader in;
+	private PrintWriter out;
+	private User user;
+	private LinkedList<User> users;
+	String[] arr = null;
+
+	public Server(int port) {
+		this.port = port;
+	}
+
+	private void start() {
+		try {
+			ss = new ServerSocket(port);
+			socket = ss.accept();
+
+			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			out = new PrintWriter(socket.getOutputStream(), true);
+
+			svrlogic();
+		} catch (IOException ex) {
+			System.err.println("Can't start server!");
+			ex.printStackTrace();
+		}
+	}
+
+	private void svrlogic() {
+		try {
+			String clientRequest = in.readLine();
+			parseClientRequest(clientRequest);
+		} catch (IOException e) {
+			System.err.println("Can't handle client's request");
+			e.printStackTrace();
+		}
+
+	}
+
+	private void parseClientRequest(String clientRequst) {
+		
+		if (clientRequst.contains(" ")) {
+			arr = clientRequst.split(" ");
+		} else {
+			arr[0] = clientRequst;
+		}
+
+		switch (arr[0]) {
+		case "add":
+			addUser();
+			break;
+			
+		case "get":
+			getUser();
+			break;
+		case "remove":
+
+			break;
+		case "getAll":
+
+			break;
+
+		default:
+			// положить ответ, что не корректно задан запрос
+			// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			break;
+		}
+	}
+
+	private void addUser() {
+		User user = new User();
+		user.setName(arr[1]);
+		user.setEmail(arr[2]);
+		user.setPhone(arr[3]);
+		users.add(user);
+		out.write("The user added successfully." + '\n');
+	}
+	
+	private void getUser() {
+		for (User user : users) {
+			if (user.getName().equals(arr[1])) {
+				out.write("The name of the user is " + user.getName() + ", the phone is " + user.getPhone() +
+						  ", the e-mail is " + user.getEmail() + "." + '\n');
+			}
+		}
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Thread serverThread = new Thread(() -> {
+			Server server = new Server(7777);
+			server.start();
+		});
+
+		serverThread.start();
+	}
+}

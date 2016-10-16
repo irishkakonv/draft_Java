@@ -1,0 +1,13 @@
+public interface A { 
+    String text = "a"; 
+} 
+ 
+public interface B { 
+    String text = "b"; 
+} 
+ 
+public class Empty2 implements A, B { 
+    public static void main(String[] args) { 
+        System.out.println(A.text);         
+    } 
+} 

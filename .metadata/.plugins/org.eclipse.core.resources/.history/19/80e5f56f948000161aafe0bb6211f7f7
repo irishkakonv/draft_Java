@@ -1,0 +1,69 @@
+package NIIT;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Server {
+	private int port;
+	private ServerSocket ss;
+	private Socket socket;
+	private BufferedReader in;
+	private BufferedWriter out;
+	
+	public Server(int port) {
+		this.port = port;
+	}
+	
+	public void start() {
+		try {
+			ss = new ServerSocket(port);
+			socket = ss.accept();
+			
+			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+			svrlogic();
+		} catch (IOException ex) {
+			System.err.println("Can't start server!");
+			ex.printStackTrace();
+		}
+	}
+
+	private void svrlogic() {
+		try {
+			name = br.readLine();
+			bw.write("Server answer for " + name + "\n");
+			bw.flush();
+
+			email = br.readLine();
+			bw.write("Server answer for " + email + "\n");
+			bw.flush();
+
+			phone = br.readLine();
+			bw.write("Server answer for " + phone + "\n");
+			bw.flush();
+
+			User user = new User(name, email, phone);
+			listUsers.add(user);
+
+		} catch (IOException ex) {
+			System.err.println("Can't handle client's request");
+			ex.printStackTrace();
+		}
+	}	
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Thread serverThread = new Thread(() -> {
+			Server server = new Server(7777);
+			server.start();
+		});
+
+		serverThread.start();
+	}
+}

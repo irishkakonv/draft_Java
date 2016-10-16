@@ -1,0 +1,136 @@
+package NIIT;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.LinkedList;
+
+public class Server {
+	private int port;
+	private ServerSocket ss;
+	private Socket socket;
+	private BufferedReader in;
+	private BufferedWriter out;
+	private User user;
+	private LinkedList<User> users;
+	String[] arr = null;
+
+	public Server(int port) {
+		this.port = port;
+	}
+
+	private void start() {
+		System.out.println("Wait a client .. ");
+		try {
+			ss = new ServerSocket(port);
+			while (true) {
+				socket = ss.accept();
+				System.out.println("A client accepted .. ");
+
+				in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+				out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+
+				svrlogic();				
+			}			
+		} catch (IOException ex) {
+			System.err.println("Can't start server!");
+			ex.printStackTrace();
+		}
+	}
+
+	private void svrlogic() {
+		try {
+			String clientRequest = in.readLine();
+			parseClientRequest(clientRequest);
+		} catch (IOException e) {
+			System.err.println("Can't handle client's request");
+			e.printStackTrace();
+		}
+	}
+
+	private void parseClientRequest(String clientRequst) throws IOException {		
+		if (clientRequst.contains(" ")) {
+			arr = clientRequst.split(" ");
+		} else {
+			arr[0] = clientRequst;
+		}
+
+		switch (arr[0]) {
+		case "add":
+			addUser();
+			break;
+			
+		case "get":
+			getUser();
+			break;
+			
+		case "remove":
+			removeUser();
+			break;
+			
+		case "getAll":
+			getAllUsers();
+			break;
+
+		default:
+			out.write("The comand was entered uncorrect. Try again." + '\n');
+			break;
+		}
+	}
+
+	private void addUser() throws IOException {
+		User user = new User();
+		user.setName(arr[1]);
+		user.setPhone(arr[2]);
+		user.setEmail(arr[3]);
+		
+		users.add(user);
+		out.write("The user is added successfully." + '\n');
+	}
+	
+	private void getUser() throws IOException {
+		for (User user : users) {
+			if (user.getName().equals(arr[1])) {
+				out.write("The name of the user is " + user.getName() + ", the phone is " + user.getPhone() +
+						  ", the e-mail is " + user.getEmail() + "." + '\n');
+			} else {
+				out.write("The user doesn't exist." + '\n');
+			}
+		}
+	}
+	
+	private void removeUser() throws IOException {
+		for (User user : users) {
+			if (user.getName().equals(arr[1])) {
+				users.remove(user);
+				out.write("The user is removed successfully." + '\n');
+			} else {
+				out.write("The user doesn't exist." + '\n');	
+			}
+		}	
+	}
+	
+	private void getAllUsers() throws IOException {
+		String allUsers = null;
+		for (int i = 0; i < users.size(); i++) {
+			allUsers += i + ". The name is " + user.getName() + ", the phone is  " + user.getPhone() + ", the e-mail is " + user.getEmail() + '\n';
+		}
+		out.write(allUsers += '\n');
+	}	
+
+	public static void main(String[] args) throws InterruptedException {
+
+		Thread serverThread = new Thread(() -> {
+			Server server = new Server(7777);
+			server.start();
+		});
+
+		serverThread.start();
+	}
+}

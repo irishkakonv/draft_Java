@@ -1,0 +1,211 @@
+package NIIT;
+
+class User{
+	private String name;
+	private String email;
+	private String phone;
+	
+	public User(String name, String email, String phone){
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+}
+
+//class Users{
+//	User user;
+//		
+//	public String getUserInfo(String name) {
+//		return "Name " + name + ", email " + user.getEmail() + ", phone " + user.getPhone();
+//	}
+//}
+//
+//class Server {
+//	private int port;
+//	private InetAddress addr;
+//	private ServerSocket ss;
+//	private Socket socket;
+//	private InputStream sis;
+//	private OutputStream sos;
+//	private InputStreamReader isr;
+//	private OutputStreamWriter osw;
+//	private BufferedReader br;
+//	private BufferedWriter bw;
+//
+//	private void svrlogic() {
+//		String name;
+//		String email;
+//		String phone;
+//		LinkedList<User>  listUsers= new LinkedList<User>();
+//		
+//		try {
+//			name = br.readLine();
+//			bw.write("Server answer for " + name + "\n");
+//			bw.flush();
+//			
+//			email = br.readLine();
+//			bw.write("Server answer for " + email + "\n");
+//			bw.flush();
+//			
+//			phone = br.readLine();
+//			bw.write("Server answer for " + phone + "\n");
+//			bw.flush();
+//			
+//			User user = new User(name, email, phone);
+//			listUsers.add(user);
+//			
+//		} catch (IOException ex) {
+//			System.err.println("Can't handle client's request");
+//			ex.printStackTrace();
+//		}
+//	}
+//
+//	public Server(int port) {
+//		this.port = port;
+//	}
+//
+//	public void start() {
+//		try {
+//			ss = new ServerSocket(port);
+//			
+//				// Accept connection
+//				socket = ss.accept();
+//				System.out.println("client " + socket.getInetAddress());
+//				
+//				System.out.println("Enter name");
+//				// input name
+//				sis = socket.getInputStream();
+//				isr = new InputStreamReader(sis);
+//				br = new BufferedReader(isr);
+//				
+//				System.out.println("Enter email");
+//				// input email
+//				sis = socket.getInputStream();
+//				isr = new InputStreamReader(sis);
+//				br = new BufferedReader(isr);
+//				
+//				System.out.println("Enter phone");
+//				// input phone
+//				sis = socket.getInputStream();
+//				isr = new InputStreamReader(sis);
+//				br = new BufferedReader(isr);
+//				
+//				// output
+//				sos = socket.getOutputStream();
+//				osw = new OutputStreamWriter(sos);
+//				bw = new BufferedWriter(osw);
+//
+//				// logic
+//				svrlogic();
+//			
+//
+//		} catch (IOException ex) {
+//			System.err.println("Can't start server!");
+//			ex.printStackTrace();
+//		}
+//	}
+//
+//}
+//
+//class Client {
+//	private int port;
+//	private InetAddress addr;
+//	private ServerSocket ss;
+//	private Socket socket;
+//	private InputStream sis;
+//	private OutputStream sos;
+//	private InputStreamReader isr;
+//	private OutputStreamWriter osw;
+//	private BufferedReader br;
+//	private BufferedWriter bw;
+//
+//	public Client(String addr, int port) {
+//		try {
+//			// connect to server
+//			this.addr = InetAddress.getByName(addr);
+//			this.port = port;
+//			socket = new Socket(addr, port);
+//			
+//			// input
+//			sis = socket.getInputStream();
+//			isr = new InputStreamReader(sis);
+//			br = new BufferedReader(isr);
+//
+//			// output
+//			sos = socket.getOutputStream();
+//			osw = new OutputStreamWriter(sos);
+//			bw = new BufferedWriter(osw);
+//
+//			cliLogic();
+//		}
+//
+//		catch (UnknownHostException ex) {
+//			System.err.println("illegal" + addr);
+//		} catch (IOException e) {
+//			System.err.println();
+//		}
+//	}
+//
+//	private void cliLogic() {
+//		try {
+//			
+//			String request = "Hello\n";
+//			bw.write(request);
+//			bw.flush();
+//
+//			String svrAnsw = br.readLine();
+//			System.out.println("Answer " + svrAnsw);
+//
+//		} catch (Exception ex) {
+//			System.err.println("Can't handle client request");
+//			ex.printStackTrace();
+//		}
+//	}
+//}
+//
+//public class Main30_ClassWork {
+//
+//	public static void main(String[] args) throws InterruptedException {
+//		
+//		Thread serverThread = new Thread(() -> {
+//			Server server = new Server(7777);
+//			server.start();
+//		});
+//
+//		serverThread.start();
+//
+//		Thread clientThread = new Thread(() -> {
+//			Client client = new Client("127.0.0.1", 7777);
+//		});
+//
+//		clientThread.start();
+//
+//		serverThread.join();
+//		clientThread.join();
+//	}
+
+
